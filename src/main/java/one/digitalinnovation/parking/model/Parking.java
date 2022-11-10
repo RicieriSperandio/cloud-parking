@@ -1,8 +1,11 @@
 package one.digitalinnovation.parking.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.time.LocalDateTime;
 
 public class Parking {
+
     private String id;
     private String license;
     private String state;
@@ -13,18 +16,20 @@ public class Parking {
     private Double bill;
 
 
-
-    public String getId() {
-        return id;
-    }
-
     public Parking(String id, String license, String state, String model, String color) {
         this.id = id;
         this.license = license;
         this.state = state;
         this.model = model;
         this.color = color;
-        }
+    }
+
+    public Parking(){
+
+    }
+    public String getId() {
+        return id;
+    }
 
     public void setId(String id) {
         this.id = id;
